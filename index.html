@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dhiya Johnson | UGC Creator</title>
+    
+    <!-- Tailwind CSS for Styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts: Playfair Display for elegant headings, Lato for clean body text -->
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    
+    <!-- Phosphor Icons -->
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Lato', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif'],
+                    },
+                    colors: {
+                        brand: {
+                            50: '#fdf8f6',
+                            100: '#f2e8e5',
+                            200: '#eaddd7',
+                            300: '#e0cec7',
+                            400: '#d2bab0',
+                            500: '#a78b81',
+                            600: '#8c736a',
+                            700: '#6d5a52',
+                            800: '#4d403a',
+                            900: '#2f2723',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Custom styles for video aspect ratio */
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+            height: 0;
+            overflow: hidden;
+            border-radius: 0.75rem;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+        }
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+        
+        /* Mobile-friendly vertical video container (9:16 ratio) - useful for TikTok/Reels */
+        .video-vertical {
+            padding-bottom: 177.77%; /* 16:9 inverted to 9:16 */
+        }
+    </style>
+</head>
+<body class="bg-brand-50 text-brand-900 font-sans antialiased selection:bg-brand-300 selection:text-brand-900">
+
+    <!-- Navigation -->
+    <nav class="fixed w-full bg-brand-50/90 backdrop-blur-md z-50 border-b border-brand-200">
+        <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#home" class="text-2xl font-serif font-bold text-brand-800 tracking-wide">Dhiya.</a>
+            
+            <!-- Desktop Menu -->
+            <div class="hidden md:flex space-x-8 text-sm uppercase tracking-widest font-bold text-brand-700">
+                <a href="#about" class="hover:text-brand-500 transition-colors">About</a>
+                <a href="#services" class="hover:text-brand-500 transition-colors">Services</a>
+                <a href="#portfolio" class="hover:text-brand-500 transition-colors">Portfolio</a>
+                <a href="#contact" class="hover:text-brand-500 transition-colors">Contact</a>
+            </div>
+
+            <!-- Mobile Menu Button -->
+            <button id="mobile-menu-btn" class="md:hidden text-brand-800 text-2xl">
+                <i class="ph ph-list"></i>
+            </button>
+        </div>
+        
+        <!-- Mobile Dropdown (Hidden by default) -->
+        <div id="mobile-menu" class="hidden md:hidden bg-brand-50 border-b border-brand-200 px-6 py-4 flex flex-col space-y-4 text-center tracking-widest uppercase text-sm font-bold">
+            <a href="#about" class="mobile-link">About</a>
+            <a href="#services" class="mobile-link">Services</a>
+            <a href="#portfolio" class="mobile-link">Portfolio</a>
+            <a href="#contact" class="mobile-link">Contact</a>
+        </div>
+    </nav>
+
+    <!-- Hero / About Section -->
+    <section id="home" class="pt-32 pb-20 md:pt-40 md:pb-28 px-6">
+        <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-12 lg:gap-20">
+            
+            <!-- Image Column -->
+            <div class="w-full md:w-5/12 relative">
+                <!-- Decorative background shape -->
+                <div class="absolute inset-0 bg-brand-200 rounded-t-full rounded-b-xl translate-x-4 translate-y-4 -z-10"></div>
+                <!-- Dhiya's Uploaded Photo -->
+                <img 
+                    src="image.png" 
+                    alt="Dhiya Johnson - UGC Creator" 
+                    class="w-full h-auto object-cover rounded-t-full rounded-b-xl shadow-lg border-4 border-white"
+                >
+            </div>
+
+            <!-- Text Column -->
+            <div class="w-full md:w-7/12 space-y-6">
+                <p class="text-brand-500 font-bold tracking-widest uppercase text-sm">Lifestyle, Beauty & Motherhood</p>
+                <h1 class="text-4xl md:text-5xl lg:text-6xl font-serif leading-tight">
+                    Hi! I’m <span class="text-brand-700 italic">Dhiya</span>.
+                </h1>
+                
+                <div class="text-lg text-brand-700 space-y-4 leading-relaxed">
+                    <p>
+                        I specialize in creating relatable, high-converting User Generated Content (UGC) that helps brands connect with real audiences. 
+                    </p>
+                    <p>
+                        As a mom, I bring authenticity, trust, and real-life storytelling into every piece of content. My goal is to craft visuals and narratives that don't just look beautiful, but actually drive engagement and conversions for your brand.
+                    </p>
+                </div>
+
+                <div class="pt-6 flex flex-wrap gap-4">
+                    <a href="#portfolio" class="px-8 py-3 bg-brand-800 text-white rounded-full hover:bg-brand-900 transition-colors font-bold tracking-wide text-sm">
+                        View My Work
+                    </a>
+                    <a href="#contact" class="px-8 py-3 border border-brand-800 text-brand-800 rounded-full hover:bg-brand-100 transition-colors font-bold tracking-wide text-sm">
+                        Let's Collaborate
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Brands Section -->
+    <section class="py-10 bg-brand-100/30 border-y border-brand-200">
+        <div class="max-w-6xl mx-auto px-6">
+            <p class="text-center text-sm font-bold tracking-widest uppercase text-brand-500 mb-8">Brands I've Worked With</p>
+            <div class="flex flex-wrap justify-center items-center gap-x-10 gap-y-6 opacity-60 grayscale hover:grayscale-0 transition-all duration-500">
+                <!-- Existing Brands -->
+                <span class="text-xl md:text-2xl font-sans font-black tracking-tight text-brand-900">SHEIN</span>
+                <span class="text-xl md:text-2xl font-sans font-black tracking-tighter text-brand-900">TEMU</span>
+                <span class="text-xl md:text-2xl font-serif italic text-brand-900">Commense</span>
+                <span class="text-xl md:text-2xl font-sans font-bold text-brand-900">Walmart</span>
+                <span class="text-xl md:text-2xl font-sans font-semibold tracking-tighter text-brand-900">amazon</span>
+                <span class="text-xl md:text-2xl font-serif uppercase tracking-widest text-brand-900">Wall Blush</span>
+                <span class="text-xl md:text-2xl font-serif font-medium text-brand-900">JJ's House</span>
+                <span class="text-xl md:text-2xl font-sans font-light tracking-widest uppercase text-brand-900">Teddy Blake</span>
+                <span class="text-xl md:text-2xl font-sans font-bold uppercase tracking-wide text-brand-900">CATCHAL</span>
+                <span class="text-xl md:text-2xl font-serif font-semibold uppercase text-brand-900">Bella Barnett</span>
+                <span class="text-xl md:text-2xl font-sans font-medium tracking-widest uppercase text-brand-900">LIWISI</span>
+                <span class="text-xl md:text-2xl font-sans font-bold tracking-wide uppercase text-brand-900">Project E Beauty</span>
+                
+                <!-- New Brands -->
+                <span class="text-xl md:text-2xl font-serif italic text-brand-900">Popilush</span>
+                <span class="text-xl md:text-2xl font-sans font-bold tracking-tight uppercase text-brand-900">Skyflakes</span>
+                <span class="text-xl md:text-2xl font-sans font-semibold tracking-tighter text-brand-900">amazon prime</span>
+                <span class="text-xl md:text-2xl font-sans font-black tracking-tighter lowercase text-brand-900">goodfood</span>
+                <span class="text-xl md:text-2xl font-sans font-medium tracking-wide text-brand-900">HelloFresh</span>
+                <span class="text-xl md:text-2xl font-serif uppercase tracking-widest text-brand-900">Rihoas</span>
+                <span class="text-xl md:text-2xl font-sans font-bold uppercase tracking-widest text-brand-900">MICAS</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-20 bg-white px-6">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-serif mb-4">Content Designed For Impact</h2>
+                <div class="w-16 h-1 bg-brand-300 mx-auto"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Service 1 -->
+                <div class="bg-brand-50 p-8 rounded-2xl text-center hover:-translate-y-2 transition-transform duration-300 border border-brand-100">
+                    <div class="w-16 h-16 mx-auto bg-brand-200 rounded-full flex items-center justify-center mb-6 text-brand-800 text-3xl">
+                        <i class="ph ph-megaphone-simple"></i>
+                    </div>
+                    <h3 class="text-xl font-serif font-bold mb-3">Paid Ads</h3>
+                    <p class="text-brand-600">
+                        High-converting, scroll-stopping content designed with strong hooks and clear calls-to-action to lower your CPA and boost ROAS.
+                    </p>
+                </div>
+
+                <!-- Service 2 -->
+                <div class="bg-brand-50 p-8 rounded-2xl text-center hover:-translate-y-2 transition-transform duration-300 border border-brand-100">
+                    <div class="w-16 h-16 mx-auto bg-brand-200 rounded-full flex items-center justify-center mb-6 text-brand-800 text-3xl">
+                        <i class="ph ph-heart"></i>
+                    </div>
+                    <h3 class="text-xl font-serif font-bold mb-3">Organic Social Media</h3>
+                    <p class="text-brand-600">
+                        Relatable, trend-aware TikToks and Reels that blend seamlessly into the feed, building community and brand loyalty.
+                    </p>
+                </div>
+
+                <!-- Service 3 -->
+                <div class="bg-brand-50 p-8 rounded-2xl text-center hover:-translate-y-2 transition-transform duration-300 border border-brand-100">
+                    <div class="w-16 h-16 mx-auto bg-brand-200 rounded-full flex items-center justify-center mb-6 text-brand-800 text-3xl">
+                        <i class="ph ph-sparkle"></i>
+                    </div>
+                    <h3 class="text-xl font-serif font-bold mb-3">Product Storytelling</h3>
+                    <p class="text-brand-600">
+                        Aesthetic unboxings, authentic testimonials, and 'get ready with me' (GRWM) routines that showcase your product in real life.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section (Video Gallery) -->
+    <section id="portfolio" class="py-20 px-6 bg-brand-100/50">
+        <div class="max-w-6xl mx-auto">
+            <div class="flex flex-col md:flex-row justify-between items-end mb-12">
+                <div>
+                    <h2 class="text-3xl md:text-4xl font-serif mb-4">Featured Work</h2>
+                    <div class="w-16 h-1 bg-brand-400"></div>
+                </div>
+                <p class="text-brand-700 mt-4 md:mt-0 max-w-md">
+                    A selection of my recent campaigns across lifestyle, beauty, and motherhood niches.
+                </p>
+            </div>
+            
+            <h3 class="text-2xl font-serif mb-6 text-brand-800">Campaign Showcases</h3>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
+                
+                <!-- Video 1 (Skincare) -->
+                <div class="bg-white p-2 rounded-xl shadow-sm">
+                    <div class="video-container video-vertical">
+                        <iframe src="https://www.instagram.com/p/C9cWi-Cufzk/embed/" loading="lazy" title="Instagram Reel" allowtransparency="true" allowfullscreen="true" frameborder="0" scrolling="no" allow="encrypted-media"></iframe>
+                    </div>
+                    <p class="text-center text-sm font-bold text-brand-700 mt-3 pb-1">Skincare Routine</p>
+                </div>
+
+                <!-- Video 2 (Beauty) -->
+                <div class="bg-white p-2 rounded-xl shadow-sm">
+                    <div class="video-container video-vertical">
+                        <iframe src="https://www.instagram.com/p/C5BD2WLuYSs/embed/" loading="lazy" title="Instagram Reel" allowtransparency="true" allowfullscreen="true" frameborder="0" scrolling="no" allow="encrypted-media"></iframe>
+                    </div>
+                    <p class="text-center text-sm font-bold text-brand-700 mt-3 pb-1">Beauty Campaign</p>
+                </div>
+
+                <!-- Video 3 (Fashion Inspo) -->
+                <div class="bg-white p-2 rounded-xl shadow-sm">
+                    <div class="video-container video-vertical">
+                        <iframe src="https://www.instagram.com/p/DA0sDRtJi3D/embed/" loading="lazy" title="Instagram Reel" allowtransparency="true" allowfullscreen="true" frameborder="0" scrolling="no" allow="encrypted-media"></iframe>
+                    </div>
+                    <p class="text-center text-sm font-bold text-brand-700 mt-3 pb-1">Fashion Inspo</p>
+                </div>
+
+                <!-- Video 4 (Style Guide) -->
+                <div class="bg-white p-2 rounded-xl shadow-sm">
+                    <div class="video-container video-vertical">
+                        <iframe src="https://www.instagram.com/p/DAn3efJpvuE/embed/" loading="lazy" title="Instagram Reel" allowtransparency="true" allowfullscreen="true" frameborder="0" scrolling="no" allow="encrypted-media"></iframe>
+                    </div>
+                    <p class="text-center text-sm font-bold text-brand-700 mt-3 pb-1">Style Guide</p>
+                </div>
+            </div>
+
+            <h3 class="text-2xl font-serif mb-6 text-brand-800">Product Unboxing</h3>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
+                
+                <!-- Unboxing Video 1 -->
+                <div class="bg-white p-2 rounded-xl shadow-sm">
+                    <div class="video-container video-vertical">
+                        <iframe src="https://drive.google.com/file/d/1MuJXlA8VZs37tlDJCPFIr7_pXNAEKWXE/preview" loading="lazy" title="Product Unboxing" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                    <p class="text-center text-sm font-bold text-brand-700 mt-3 pb-1">Product Unboxing</p>
+                </div>
+
+                <!-- Unboxing Video 2 -->
+                <div class="bg-white p-2 rounded-xl shadow-sm">
+                    <div class="video-container video-vertical">
+                        <iframe src="https://drive.google.com/file/d/1IdJb9oJe_COuz0f5lrHGpId3iYH9_blR/preview" loading="lazy" title="Product Unboxing" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                    <p class="text-center text-sm font-bold text-brand-700 mt-3 pb-1">Product Unboxing</p>
+                </div>
+
+                <!-- Unboxing Video 3 -->
+                <div class="bg-white p-2 rounded-xl shadow-sm">
+                    <div class="video-container video-vertical">
+                        <iframe src="https://drive.google.com/file/d/1qLsCLbzGpLkF8o0mNjVCmSiOiNECzTkq/preview" loading="lazy" title="Product Unboxing" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                    <p class="text-center text-sm font-bold text-brand-700 mt-3 pb-1">Product Unboxing</p>
+                </div>
+
+                <!-- Unboxing Video 4 -->
+                <div class="bg-white p-2 rounded-xl shadow-sm">
+                    <div class="video-container video-vertical">
+                        <iframe src="https://drive.google.com/file/d/1aWWSlxH7cses3nOThG2pGoxChCyHJcrH/preview" loading="lazy" title="Product Unboxing" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                    <p class="text-center text-sm font-bold text-brand-700 mt-3 pb-1">Product Unboxing</p>
+                </div>
+
+                <!-- Unboxing Video 5 -->
+                <div class="bg-white p-2 rounded-xl shadow-sm">
+                    <div class="video-container video-vertical">
+                        <iframe src="https://drive.google.com/file/d/13b6MBiCSLjTKEfOGbdLklsvyIWcEbmoj/preview" loading="lazy" title="Product Unboxing" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                    <p class="text-center text-sm font-bold text-brand-700 mt-3 pb-1">Product Unboxing</p>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-24 px-6 bg-brand-800 text-white text-center">
+        <div class="max-w-3xl mx-auto">
+            <h2 class="text-4xl md:text-5xl font-serif mb-6">Let's Create Together</h2>
+            <p class="text-brand-200 text-lg mb-10 leading-relaxed">
+                Looking for authentic content that converts? I'd love to hear about your brand's goals and how we can collaborate.
+            </p>
+            
+            <!-- Replace with her actual email -->
+            <a href="mailto:curatedbydia@gmail.com" class="inline-block bg-white text-brand-900 px-10 py-4 rounded-full font-bold tracking-wide hover:bg-brand-100 transition-colors shadow-lg hover:shadow-xl transform hover:-translate-y-1">
+                curatedbydia@gmail.com
+            </a>
+
+            <div class="mt-16 flex justify-center space-x-6 text-3xl text-brand-300">
+                <!-- Social links -->
+                <a href="https://www.instagram.com/dhiyajohnson_/" target="_blank" rel="noopener noreferrer" class="hover:text-white transition-colors" aria-label="Instagram"><i class="ph ph-instagram-logo"></i></a>
+                <a href="mailto:curatedbydia@gmail.com" class="hover:text-white transition-colors" aria-label="Email"><i class="ph ph-envelope-simple"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-brand-900 text-brand-400 py-8 text-center text-sm border-t border-brand-700/30">
+        <p>&copy; <script>document.write(new Date().getFullYear())</script> Dhiya Johnson. All rights reserved.</p>
+    </footer>
+
+    <!-- Simple Script for Mobile Menu -->
+    <script>
+        const btn = document.getElementById('mobile-menu-btn');
+        const menu = document.getElementById('mobile-menu');
+        const links = document.querySelectorAll('.mobile-link');
+
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+        });
+
+        links.forEach(link => {
+            link.addEventListener('click', () => {
+                menu.classList.add('hidden');
+            });
+        });
+    </script>
+</body>
+</html>
